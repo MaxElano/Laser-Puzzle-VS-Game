@@ -5,7 +5,7 @@ using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class UsableTile : EmptyTile
+public class UsableTile : Tile
 {
     public int Owner;
     public enum Effect { Stop, Kill, Reflect, Passthrough}
@@ -15,11 +15,12 @@ public class UsableTile : EmptyTile
     [SerializeField] private Effect?[,] effectGrid;
     [SerializeField] private Direction baseDirection;
 
-    public void Init(bool isOffset)
+    public override void Init(bool isOffset)
     {
         effectGrid = new Effect?[3,3];
         baseDirection = Direction.Up;
         rotation = baseDirection;
+        base.Init(isOffset);
     }
 
 
@@ -60,6 +61,7 @@ public class UsableTile : EmptyTile
                 break;
         }
 
+        return null;
         //For all items in list rotate by offset
     }
 

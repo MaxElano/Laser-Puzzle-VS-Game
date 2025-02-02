@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5774941987478881442}
   - component: {fileID: 7272410006453439166}
   m_Layer: 0
-  m_Name: LaserStart
+  m_Name: LaserTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.32015365, g: 0.6132076, b: 0.00867745, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,6 +106,9 @@ MonoBehaviour:
   offsetColor: {r: 0.27450982, g: 0.6117647, b: 0.18039216, a: 1}
   spriteRenderer: {fileID: 8960619826936312493}
   highLight: {fileID: 6411144397181594396}
+  Owner: 0
+  rotation: 0
+  baseDirection: 0
 --- !u!61 &7272410006453439166
 BoxCollider2D:
   m_ObjectHideFlags: 0

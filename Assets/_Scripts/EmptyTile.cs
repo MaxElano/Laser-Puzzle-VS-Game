@@ -1,14 +1,13 @@
 using UnityEngine;
 using static UsableTile;
 
-public class EmptyTile : MonoBehaviour
+public class Tile : MonoBehaviour
 {
-
     [SerializeField] private UnityEngine.Color baseColor, offsetColor;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private GameObject highLight;
 
-    public void Init(bool isOffset)
+    public virtual void Init(bool isOffset)
     {
         spriteRenderer.color = isOffset ? offsetColor : baseColor;
     }
