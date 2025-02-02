@@ -5,8 +5,9 @@ using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+public class UsableTile : EmptyTile
 {
+    public int Owner;
     public enum Effect { Stop, Kill, Reflect, Passthrough}
     public enum Direction { Up, Right, Down, Left }
 
@@ -14,31 +15,11 @@ public class Tile : MonoBehaviour
     [SerializeField] private Effect?[,] effectGrid;
     [SerializeField] private Direction baseDirection;
 
-    [SerializeField] private Color baseColor, offsetColor;
-    [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private GameObject highLight;
-
     public void Init(bool isOffset)
     {
-        spriteRenderer.color = isOffset ? offsetColor : baseColor;
         effectGrid = new Effect?[3,3];
         baseDirection = Direction.Up;
         rotation = baseDirection;
-    }
-
-    private void OnMouseEnter()
-    {
-        highLight.SetActive(true);
-    }
-
-    private void OnMouseExit()
-    {
-        highLight.SetActive(false);
-    }
-
-    private void OnMouseDown()
-    {
-        
     }
 
 

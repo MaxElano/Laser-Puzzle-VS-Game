@@ -1,5 +1,4 @@
 using System.Drawing;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -52,5 +51,10 @@ public class GridManager : MonoBehaviour
             return tiles[actualPosition.X, actualPosition.Y];
         else
             return null;
+    }
+
+    public void ShootLaser()
+    {
+
     }
 }
